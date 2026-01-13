@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Performance - 2026-01-13</title>
+    <title>Account Performance - 2026-01-14</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/bundle.min.js"></script>
     <style>
@@ -26,14 +26,14 @@
 <body>
     <div class="container">
         <h1>Account Performance</h1>
-        <h2>Current Value: $2,786.07 <br><small>as of 2026-01-13</small></h2>
+        <h2>Current Value: $2,847.54 <br><small>as of 2026-01-14</small></h2>
         <div class="pct">
-            Since start (2026-01-01): <span class="positive">+0.12%</span>
+            Since start (2026-01-01): <span class="positive">+2.33%</span>
         </div>
         <div class="metrics">
             <div class="metric">
                 <div class="metric-title">Avg Daily</div>
-                <div class="metric-value positive">$+0.27 (+0.01%)</div>
+                <div class="metric-value positive">$+4.98 (+0.18%)</div>
             </div>
             <div class="metric">
                 <div class="metric-title">Avg Weekly</div>
@@ -45,7 +45,7 @@
             </div>
             <div class="metric">
                 <div class="metric-title">Last Week</div>
-                <div class="metric-value negative">$-8.66 (-0.31%)</div>
+                <div class="metric-value positive">$+52.80 (+1.89%)</div>
             </div>
             <div class="metric">
                 <div class="metric-title">Last Month</div>
@@ -59,8 +59,8 @@
     </div>
     <script>
         const ctx = document.getElementById('chart').getContext('2d');
-        const dates = ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-10", "2026-01-11", "2026-01-12", "2026-01-13"];
-        const values = [2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2794.733287, 2794.733287, 2798.355823, 2802.535565, 2800.6376990000003, 2789.975744, 2786.071222];
+        const dates = ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-10", "2026-01-11", "2026-01-12", "2026-01-13", "2026-01-14"];
+        const values = [2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2794.733287, 2794.733287, 2798.355823, 2802.535565, 2800.6376990000003, 2789.975744, 2786.071222, 2847.535921];
 
         const minVal = Math.min(...values);
         const maxVal = Math.max(...values);
