@@ -21,6 +21,10 @@
         .metric-value { font-weight: bold; font-size: 1.3em; }
         .chart-container { position: relative; height: 500px; width: 100%; background: rgba(51, 65, 85, 0.6); border-radius: 16px; padding: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
         footer { margin-top: 50px; color: #64748b; font-size: 0.9em; }
+        .toggle { margin: 20px 0; }
+        .toggle button { background: #334155; color: #e2e8f0; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; }
+        .toggle button:hover { background: #475569; }
+        .watermark { position: absolute; bottom: 10px; right: 10px; color: #475569; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -28,7 +32,7 @@
         <h1>Account Performance</h1>
         <h2>Current Value: $2,847.54 <br><small>as of 2026-01-14</small></h2>
         <div class="pct">
-            Since start (2026-01-01): <span class="positive">+2.33%</span>
+            Since start (2026-01-01): <span class="positive">$+64.75 (+2.33%)</span>
         </div>
         <div class="metrics">
             <div class="metric">
@@ -40,7 +44,7 @@
                 <div class="metric-value positive">$+11.94 (+0.43%)</div>
             </div>
             <div class="metric">
-                <div class="metric-title">Avg Monthly</div>
+                <div class="metric-title">Avg Monthly (Trailing 30d)</div>
                 <div class="metric-value positive">$+0.00 (+0.00%)</div>
             </div>
             <div class="metric">
@@ -48,14 +52,19 @@
                 <div class="metric-value positive">$+52.80 (+1.89%)</div>
             </div>
             <div class="metric">
-                <div class="metric-title">Last Month</div>
+                <div class="metric-title">Last Month (Trailing 30d)</div>
                 <div class="metric-value positive">$+0.00 (+0.00%)</div>
             </div>
+            
+        </div>
+        <div class="toggle">
+            <button onclick="toggleScale()">Toggle Log Scale</button>
         </div>
         <div class="chart-container">
             <canvas id="chart"></canvas>
         </div>
-        <footer>Auto-generated daily</footer>
+        <footer>Auto-generated daily | Data points: 14 days</footer>
+        <div class="watermark">GitHub: <a href="https://github.com/yourusername/tracking" style="color: #64748b;">yourusername/tracking</a></div>
     </div>
     <script>
         const ctx = document.getElementById('chart').getContext('2d');
@@ -66,7 +75,9 @@
         const maxVal = Math.max(...values);
         const padding = (maxVal - minVal) * 0.15 || 10;
 
-        new Chart(ctx, {
+        let isLogScale = false;
+
+        const config = {
             type: 'line',
             data: {
                 labels: dates,
@@ -121,11 +132,21 @@
                             color: '#94a3b8',
                             callback: function(value) { return '$' + value.toLocaleString(undefined, {minimumFractionDigits: 0}) }
                         },
-                        title: { display: true, text: 'Total Value', color: '#cbd5e1', font: { size: 14 } }
+                        title: { display: true, text: 'Total Value', color: '#cbd5e1', font: { size: 14 } },
+                        type: 'linear'
                     }
                 }
             }
-        });
+        };
+
+        const chart = new Chart(ctx, config);
+
+        function toggleScale() {
+            isLogScale = !isLogScale;
+            config.options.scales.y.type = isLogScale ? 'logarithmic' : 'linear';
+            config.options.scales.y.min = isLogScale ? Math.max(1, minVal - padding) : minVal - padding; // Avoid log(0)
+            chart.update();
+        }
     </script>
 </body>
 </html>
