@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Performance - 2026-01-29</title>
+    <title>Account Performance - 2026-01-30</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/bundle.min.js"></script>
     <style>
@@ -30,14 +30,14 @@
 <body>
     <div class="container">
         <h1>Account Performance</h1>
-        <h2>Current Value: $2,642.22 <br><small>as of 2026-01-29</small></h2>
+        <h2>Current Value: $2,207.27 <br><small>as of 2026-01-30</small></h2>
         <div class="pct">
-            Since start (2026-01-01): <span class="negative">$-140.57 (-5.05%)</span>
+            Since start (2026-01-01): <span class="negative">$-575.52 (-20.68%)</span>
         </div>
         <div class="metrics">
             <div class="metric">
                 <div class="metric-title">Avg Daily</div>
-                <div class="metric-value negative">$-5.02 (-0.11%)</div>
+                <div class="metric-value negative">$-19.85 (-0.68%)</div>
             </div>
             <div class="metric">
                 <div class="metric-title">Avg Weekly</div>
@@ -45,15 +45,15 @@
             </div>
             <div class="metric">
                 <div class="metric-title">Avg Monthly (Trailing 30d)</div>
-                <div class="metric-value positive">$+0.00 (+0.00%)</div>
+                <div class="metric-value positive">$+0.00 (-20.68%)</div>
             </div>
             <div class="metric">
                 <div class="metric-title">Last Week</div>
-                <div class="metric-value positive">$+24.83 (+0.95%)</div>
+                <div class="metric-value negative">$-424.17 (-16.12%)</div>
             </div>
             <div class="metric">
                 <div class="metric-title">Last Month (Trailing 30d)</div>
-                <div class="metric-value positive">$+0.00 (+0.00%)</div>
+                <div class="metric-value negative">$-575.52 (-20.68%)</div>
             </div>
             
         </div>
@@ -63,13 +63,13 @@
         <div class="chart-container">
             <canvas id="chart"></canvas>
         </div>
-        <footer>Auto-generated daily | Data points: 29 days</footer>
+        <footer>Auto-generated daily | Data points: 30 days</footer>
         <div class="watermark">GitHub: <a href="https://github.com/yourusername/tracking" style="color: #64748b;">yourusername/tracking</a></div>
     </div>
     <script>
         const ctx = document.getElementById('chart').getContext('2d');
-        const dates = ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-10", "2026-01-11", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-17", "2026-01-18", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-24", "2026-01-25", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29"];
-        const values = [2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2794.733287, 2794.733287, 2798.355823, 2802.535565, 2800.6376990000003, 2789.975744, 2786.071222, 2847.535921, 2848.290402, 2850.250968, 2895.843241, 2909.650633, 2903.419542, 2837.059155, 2536.5057890000003, 2723.0927120000006, 2617.389988, 2631.434891, 2619.980594, 2345.2031290000004, 2546.6504130000003, 2634.4682570000004, 2642.221756];
+        const dates = ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-10", "2026-01-11", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-17", "2026-01-18", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-24", "2026-01-25", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30"];
+        const values = [2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2782.790604, 2794.733287, 2794.733287, 2798.355823, 2802.535565, 2800.6376990000003, 2789.975744, 2786.071222, 2847.535921, 2848.290402, 2850.250968, 2895.843241, 2909.650633, 2903.419542, 2837.059155, 2536.5057890000003, 2723.0927120000006, 2617.389988, 2631.434891, 2619.980594, 2345.2031290000004, 2546.6504130000003, 2634.4682570000004, 2642.221756, 2207.2697470000003];
 
         const minVal = Math.min(...values);
         const maxVal = Math.max(...values);
