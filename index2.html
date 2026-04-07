@@ -63,7 +63,7 @@
         <div class="chart-container">
             <canvas id="chart"></canvas>
         </div>
-        <footer>Auto-generated daily | Data points: 5 days</footer>
+        <footer>Auto-generated daily | Data points: 5 days (from 2026-01-01)</footer>
         <div class="watermark">GitHub: <a href="https://github.com/yourusername/tracking" style="color: #64748b;">yourusername/tracking</a></div>
     </div>
     <script>
@@ -144,7 +144,7 @@
         function toggleScale() {
             isLogScale = !isLogScale;
             config.options.scales.y.type = isLogScale ? 'logarithmic' : 'linear';
-            config.options.scales.y.min = isLogScale ? Math.max(1, minVal - padding) : minVal - padding; // Avoid log(0)
+            config.options.scales.y.min = isLogScale ? Math.max(1, minVal - padding) : minVal - padding;
             chart.update();
         }
     </script>
