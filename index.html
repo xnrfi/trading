@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Performance - 2026-04-10</title>
+    <title>Account Performance - 2026-04-11</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/bundle.min.js"></script>
     <style>
@@ -29,12 +29,12 @@
 <body>
     <div class="container">
         <h1>Account Performance</h1>
-        <h2>Current Value: $999.99 <br><small>as of 2026-04-10</small></h2>
+        <h2>Current Value: $1,000.90 <br><small>as of 2026-04-11</small></h2>
         <div class="pct">
-            Since start (<strong>2026-04-07</strong>): <span class="positive">$+0.00 (+0.00%)</span>
+            Since start (<strong>2026-04-07</strong>): <span class="positive">$+0.91 (+0.09%)</span>
         </div>
         <div class="metrics">
-            <div class="metric"><div class="metric-title">Avg Daily</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
+            <div class="metric"><div class="metric-title">Avg Daily</div><div class="metric-value positive">$+0.23 (+0.02%)</div></div>
             <div class="metric"><div class="metric-title">Avg Weekly</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
             <div class="metric"><div class="metric-title">Avg Monthly (Trailing 30d)</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
             <div class="metric"><div class="metric-title">Last Week</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
@@ -43,13 +43,13 @@
         </div>
         <div class="toggle"><button onclick="toggleScale()">Toggle Log Scale</button></div>
         <div class="chart-container"><canvas id="chart"></canvas></div>
-        <footer>Auto-generated daily | Data points: 4 days (from 2026-04-07)</footer>
+        <footer>Auto-generated daily | Data points: 5 days (from 2026-04-07)</footer>
         <div class="watermark">GitHub: <a href="https://github.com/yourusername/tracking" style="color: #64748b;">yourusername/tracking</a></div>
     </div>
     <script>
         const ctx = document.getElementById('chart').getContext('2d');
-        const dates = ["2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10"];
-        const values = [999.9912, 999.9912, 999.9912, 999.9912];
+        const dates = ["2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-11"];
+        const values = [999.9912, 999.9912, 999.9912, 999.9912, 1000.904212];
         const minVal = Math.min(...values);
         const maxVal = Math.max(...values);
         const padding = (maxVal - minVal) * 0.15 || 10;
