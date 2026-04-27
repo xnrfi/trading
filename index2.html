@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Performance - 2026-04-26</title>
+    <title>Account Performance - 2026-04-28</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/bundle.min.js"></script>
     <style>
@@ -29,27 +29,27 @@
 <body>
     <div class="container">
         <h1>Account Performance</h1>
-        <h2>Current Value: $5,217.33 <br><small>as of 2026-04-26</small></h2>
+        <h2>Current Value: $5,401.46 <br><small>as of 2026-04-28</small></h2>
         <div class="pct">
-            Since start (<strong>2026-04-07</strong>): <span class="positive">$+216.56 (+4.33%)</span>
+            Since start (<strong>2026-04-07</strong>): <span class="positive">$+400.69 (+8.01%)</span>
         </div>
         <div class="metrics">
-            <div class="metric"><div class="metric-title">Avg Daily</div><div class="metric-value positive">$+11.40 (+0.31%)</div></div>
-            <div class="metric"><div class="metric-title">Avg Weekly</div><div class="metric-value positive">$+2.40 (+0.05%)</div></div>
+            <div class="metric"><div class="metric-title">Avg Daily</div><div class="metric-value positive">$+19.08 (+0.48%)</div></div>
+            <div class="metric"><div class="metric-title">Avg Weekly</div><div class="metric-value positive">$+133.56 (+2.67%)</div></div>
             <div class="metric"><div class="metric-title">Avg Monthly (Trailing 30d)</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
-            <div class="metric"><div class="metric-title">Last Week</div><div class="metric-value negative">$-54.47 (-1.03%)</div></div>
+            <div class="metric"><div class="metric-title">Last Week</div><div class="metric-value positive">$+343.61 (+6.79%)</div></div>
             <div class="metric"><div class="metric-title">Last Month (Trailing 30d)</div><div class="metric-value positive">$+0.00 (+0.00%)</div></div>
             
         </div>
         <div class="toggle"><button onclick="toggleScale()">Toggle Log Scale</button></div>
         <div class="chart-container"><canvas id="chart"></canvas></div>
-        <footer>Auto-generated daily | Data points: 20 days (from 2026-04-07)</footer>
+        <footer>Auto-generated daily | Data points: 22 days (from 2026-04-07)</footer>
         <div class="watermark">GitHub: <a href="https://github.com/yourusername/tracking" style="color: #64748b;">yourusername/tracking</a></div>
     </div>
     <script>
         const ctx = document.getElementById('chart').getContext('2d');
-        const dates = ["2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-11", "2026-04-12", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26"];
-        const values = [5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5019.62272754, 4826.38979809, 4919.44427382, 4595.37203118, 4910.04320108, 5271.79942857, 5005.56797921, 5057.84857361, 4692.09221616, 5163.04935624, 5234.76132583, 5217.33393076];
+        const dates = ["2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-11", "2026-04-12", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28"];
+        const values = [5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5000.77683661, 5019.62272754, 4826.38979809, 4919.44427382, 4595.37203118, 4910.04320108, 5271.79942857, 5005.56797921, 5057.84857361, 4692.09221616, 5163.04935624, 5234.76132583, 5217.33393076, 4916.43522803, 5401.46239106];
         const minVal = Math.min(...values);
         const maxVal = Math.max(...values);
         const padding = (maxVal - minVal) * 0.15 || 10;
